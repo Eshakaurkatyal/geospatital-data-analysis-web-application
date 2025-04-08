@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Choose Calculation</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='styles.css')}}">
+</head>
+<body>
+   <align='right'> <h1>Select What You Want to Calculate for {{ country['country_name'] }}</h1>
+</align><br>
+    {% if country['country_name'] in ['Antarctica', 'Australia'] %}
+        <!-- Directly show the calculation options without selecting the country -->
+        <form action="{{ url_for('calculate') }}" method="POST">
+            <input type="hidden" name="country_name" value="{{ country['country_name'] }}">
+            <input type="hidden" name="latitude" value="{{ country['latitude'] }}">
+            <input type="hidden" name="longitude" value="{{ country['longitude'] }}">
+            
+            <select name="calculation">
+                <option value="distance_equator">Distance from Equator</option>
+                <option value="stereographic_projection">Stereographic Projection</option>
+                <option value="solar_angle">Solar Angle</option>
+                <option value="quit">Quit</option>
+            </select>
+            <button type="submit">Calculate</button>
+        </form>
+    {% else %}
+        <!-- For other countries, the calculation form remains the same -->
+        <form action="/calculate" method="POST">
+            <input type="hidden" name="country_name" value="{{ country['country_name'] }}">
+            <input type="hidden" name="latitude" value="{{ country['latitude'] }}">
+            <input type="hidden" name="longitude" value="{{ country['longitude'] }}">
+            
+            <select name="calculation">
+                <option value="distance_equator">Distance from Equator</option>
+                <option value="stereographic_projection">Stereographic Projection</option>
+                <option value="solar_angle">Solar Angle</option>
+                <option value="quit">Quit</option>
+            </select> 
+            <button type="submit">proceed</button>
+        </form>
+    {% endif %}
+</body>
+</html>

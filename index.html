@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Enter Coordinates</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='styles.css')}}">
+</head>
+<body>
+    <div class="container">
+    <h1>Enter Coordinates</h1>
+    <form action="/" method="POST">
+       <lable for="latitude"> Latitude:</lable> <input type="number" name="latitude" step="any" placeholder="e.g.,34.0522"required>
+       <lable for="longitude"> Longitude:</lable> <input type="number" name="longitude" step="any" placeholder="e.g.,118.2437"required>
+       <p> <center>
+        <button type="submit">Find Continent</button>
+    </form>
+</body>
+</html>

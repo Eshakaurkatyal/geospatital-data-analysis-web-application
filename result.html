@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Calculation Result</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='styles.css')}}">
+</head>
+<body>
+    <h1>Result for {{ country }}</h1>
+    <h2><p><p><p><p><uunderline><center>{{ result }}</p></h2>
+    <form action="{{ url_for('home') }}" method="GET"><p><p><p><center>
+        <button type="submit">Start again?</button>
+    </form>
+</form>
+<form action="{{ url_for('quit') }}" method="GET">
+    <button type="submit">Quit</button>
+     
+</body>
+</html>

@@ -1,0 +1,147 @@
+/* Set background image and center content */
+body {
+    background: url("../static/globe.jpeg") no-repeat center center fixed;
+    background-size: cover;
+    font-family: "Copperplate Gothic Bold", serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #fff;
+}
+
+/* Center the container and make it responsive */
+.container {
+    width: 90%;
+    max-width: 600px; /* Increased from 500px */
+    background: rgba(0, 0, 0, 0.7);
+    padding: 40px; /* Increased from 30px */
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    margin-top: 20px;
+}
+
+/* Style headings */
+h1 {
+    color: #fff;
+    font-size: 96px; /* Increased from 72px */
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+/* Style labels */
+label {
+    font-size: 24px; /* Increased from 18px */
+    font-weight: bold;
+    display: block;
+    margin: 15px 0 8px;
+    color: #fff;
+}
+
+/* Style input fields */
+input[type="text"], input[type="number"] {
+    width: 85%;
+    padding: 12px;
+    font-size: 20px; /* Increased from 16px */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+    text-align: center;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus, input[type="number"]:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+/* Style dropdown */
+select {
+    width: 90%;
+    padding: 12px;
+    font-size: 20px; /* Increased from 16px */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+    margin-top: 8px;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+}
+
+/* Dropdown hover effect */
+select:hover {
+    border-color: #3498db;
+}
+
+/* Ensure dropdown options are visible */
+option {
+    background: white;
+    color: #333;
+}
+
+/* Style buttons */
+button {
+    background-color: #3498db;
+    color: white;
+    padding: 14px 24px;
+    margin-top: 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 24px; /* Increased from 18px */
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: #2980b9;
+}
+
+/* Ensure form elements are aligned properly */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Add spacing between form elements */
+form > * {
+    margin-bottom: 20px; /* Increased from 15px */
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .container {
+        width: 95%;
+        padding: 20px;
+    }
+
+    select, input {
+        width: 95%;
+    }
+
+    h1 {
+        font-size: 48px;
+    }
+
+    label {
+        font-size: 16px;
+    }
+
+    button {
+        padding: 12px 20px;
+        font-size: 16px;
+    }
+}
+
+/* Debugging (use this only temporarily) */
+.debug {
+    font-size: 14px;
+    color: red;
+}

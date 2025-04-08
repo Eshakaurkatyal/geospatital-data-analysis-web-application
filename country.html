@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Select Country</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='styles.css')}}">
+</head>
+<body>
+    <h1>Continent: {{ continent | capitalize }}</h1>
+    <form action="{{ url_for('countries', continent=continent) }}" method="GET">
+       <br><p><p><p><center> <button type="submit">Select Country</button>
+    </form>
+</body>
+</html>
